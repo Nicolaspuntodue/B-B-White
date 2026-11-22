@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>White B&amp;B · Castellammare del Golfo</title>
+<meta name="description" content="White B&B: cinque camere a Castellammare del Golfo, colazione fatta in casa da Maria, a dieci minuti a piedi dal porto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a href="#top" class="nav-mark">White B&amp;B</a>
+  <nav>
+    <a href="#camere">Camere</a>
+    <a href="#colazione">Colazione</a>
+    <a href="#prenota">Prenota</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <img class="hero-fallback" src="img/hero.webp" alt="Tramonto su Castellammare del Golfo: il porto, il castello e il Monte Inici visti da un terrazzo" width="1344" height="752">
+    <h1 class="hero-title">
+      <span class="l1"><span>White</span></span>
+      <span class="l2"><span>B&amp;B</span></span>
+    </h1>
+    <div class="hero-mid">
+      <p>Cinque camere bianche, ognuna con il suo colore, a dieci minuti a piedi dal porto di Castellammare del Golfo.</p>
+      <a class="btn" href="#prenota">Controlla le date</a>
+    </div>
+  </section>
+
+  <section class="intro" id="casa">
+    <h2 class="intro-title reveal">Una casa bianca<br>in via Segesta</h2>
+    <p class="intro-text reveal">Maria, suo marito e la figlia aprono le porte di casa loro: camere rifatte ogni mattina, consigli su dove cenare e una marmellata da portare via quando riparti.</p>
+    <figure class="intro-big reveal"><img src="img/scopello.webp" alt="La Tonnara di Scopello con i faraglioni, a pochi minuti d’auto dal B&B" width="1920" height="1440" loading="lazy"><figcaption>La Tonnara di Scopello</figcaption></figure>
+    <figure class="intro-small reveal"><img src="img/zingaro.webp" alt="Il mare della Riserva dello Zingaro con le ginestre in fiore" width="1920" height="1920" loading="lazy"><figcaption>La Riserva dello Zingaro</figcaption></figure>
+    <dl class="intro-facts reveal">
+      <div><dt>4,9</dt><dd>su Google, 115 recensioni</dd></div>
+      <div><dt>9,7</dt><dd>su Booking, 35 recensioni</dd></div>
+      <div><dt>5</dt><dd>camere, tutte con aria condizionata e bagno privato</dd></div>
+    </dl>
+  </section>
+
+  <section class="rooms" id="camere">
+    <div class="rooms-stage">
+      <h2 class="rooms-title">Cinque camere,<br>cinque colori</h2>
+      <div class="rooms-track">
+        <article class="room" data-color="#d8262c">
+          <img src="img/p6.webp" alt="Camera Rossa con letto matrimoniale e fasce rosse sulla parete" width="1280" height="852" loading="lazy">
+          <div class="room-panel"><h3>Rossa</h3><p>Deluxe, letto queen, balcone.<br><a href="#prenota" data-room="Rossa">Scegli questa</a></p></div>
+        </article>
+        <article class="room" data-color="#ef7317">
+          <img src="img/p8.webp" alt="Camera Arancio tripla con letto matrimoniale e singolo" width="1225" height="900" loading="lazy">
+          <div class="room-panel"><h3>Arancio</h3><p>Tripla, queen e singolo, balcone.<br><a href="#prenota" data-room="Arancio">Scegli questa</a></p></div>
+        </article>
+        <article class="room" data-color="#1f5fc4">
+          <img src="img/p19.webp" alt="Camera Blu con fasce blu e quadro di una barca" width="940" height="940" loading="lazy">
+          <div class="room-panel"><h3>Blu</h3><p>Deluxe, letto queen, balcone.<br><a href="#prenota" data-room="Blu">Scegli questa</a></p></div>
+        </article>
+        <article class="room" data-color="#2f8190">
+          <img src="img/p7.webp" alt="Camera Gigli con parete petrolio e testiera bianca" width="1280" height="852" loading="lazy">
+          <div class="room-panel"><h3>Gigli</h3><p>Tripla, queen e singolo, culla su richiesta.<br><a href="#prenota" data-room="Gigli">Scegli questa</a></p></div>
+        </article>
+        <article class="room" data-color="#b5202a">
+          <img src="img/p5.webp" alt="Camera Corallo con fasce rosse e letto matrimoniale" width="1280" height="852" loading="lazy">
+          <div class="room-panel"><h3>Corallo</h3><p>Tripla, queen e singolo, balcone.<br><a href="#prenota" data-room="Corallo">Scegli questa</a></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="breakfast" id="colazione">
+    <figure class="bf-photo"><img src="img/p1.webp" alt="I tavolini della colazione sul terrazzo, con i gerani e la montagna" width="1200" height="900" loading="lazy"></figure>
+    <figure class="bf-still"><img src="img/colazione.webp" alt="Una colazione siciliana sul terrazzo: cornetti, trecce, marmellate fatte in casa e caffè" width="896" height="1120" loading="lazy"></figure>
+    <div class="bf-text">
+      <h2 class="reveal">La colazione<br>la fa Maria</h2>
+      <p class="reveal">Si mangia fuori, sul terrazzo, davanti al Monte Inici. Caffè Borbone, pane del forno vicino, cornetti, trecce zuccherate e le marmellate che Maria prepara in casa. Ogni tanto, il tiramisù della figlia.</p>
+      <ul class="reveal">
+        <li>Servita ogni mattina sul terrazzo</li>
+        <li>Marmellate fatte in casa</li>
+        <li>Pane locale e dolci freschi</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="quote">
+    <figure class="quote-photo reveal"><img src="img/tramonto.webp" alt="Un terrazzo bianco al tramonto con gerani e due caffè, il golfo sullo sfondo" width="896" height="1120" loading="lazy"></figure>
+    <blockquote class="reveal">
+      <p>“Avevo le lacrime agli occhi quando siamo partiti. Maria ci ha salutato con un ‘alla prossima’ e ho sentito di lasciare un posto in cui non vedo l’ora di tornare.”</p>
+      <footer>Michaela, Repubblica Ceca · recensione Booking.com, 10/10</footer>
+    </blockquote>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="mq-track"><span>Castellammare del Golfo</span><span>Cala Petrolo</span><span>Scopello</span><span>Zingaro</span><span>Segesta</span><span>Monte Inici</span><span>Castellammare del Golfo</span><span>Cala Petrolo</span><span>Scopello</span><span>Zingaro</span><span>Segesta</span><span>Monte Inici</span></div></div>
+  <section class="around">
+    <div class="around-head reveal"><h2>Intorno a via Segesta</h2><div class="around-stack">
+        <img class="on" src="img/golfo.webp" alt="Il porto e il centro di Castellammare dall’alto" width="1920" height="1440" loading="lazy">
+        <img src="img/cala-petrolo.webp" alt="La spiaggia di Cala Petrolo sotto il castello" width="896" height="1120" loading="lazy">
+        <img src="img/zingaro.webp" alt="Il mare della Riserva dello Zingaro" width="1920" height="1920" loading="lazy">
+        <img src="img/segesta.webp" alt="Il tempio dorico di Segesta" width="1080" height="1920" loading="lazy">
+        <img src="img/hero.webp" alt="Il golfo al tramonto" width="1344" height="752" loading="lazy">
+      </div></div>
+    <ul class="around-list">
+      <li><strong>Centro e porto</strong><span>Dieci minuti a piedi tra ristoranti, bar e la marina.</span></li>
+      <li><strong>Cala Petrolo</strong><span>La spiaggia sotto il castello, a breve distanza.</span></li>
+      <li><strong>Scopello e lo Zingaro</strong><span>La riserva e le sue calette, a pochi minuti d’auto.</span></li>
+      <li><strong>Segesta</strong><span>Il tempio dorico nell’entroterra, comodo in giornata.</span></li>
+      <li><strong>Aeroporto di Palermo</strong><span>Falcone-Borsellino, circa 44 km.</span></li>
+    </ul>
+  </section>
+
+  <section class="book" id="prenota">
+    <div class="book-photo"><img src="img/golfo.webp" alt="Il golfo di Castellammare visto dall’alto, con il porto e il paese" width="1920" height="1440" loading="lazy"></div>
+    <div class="book-card">
+      <h2>Prenota la tua camera</h2>
+      <ol class="steps" aria-label="Passaggi della prenotazione">
+        <li class="on">Date</li><li>Camera</li><li>Dati</li><li>Pagamento</li>
+      </ol>
+
+      <form id="bk" novalidate>
+        <!-- 1. dates -->
+        <fieldset class="step" data-step="0">
+          <legend class="sr">Date e ospiti</legend>
+          <div class="grid2">
+            <label>Arrivo<input type="date" name="in" required></label>
+            <label>Partenza<input type="date" name="out" required></label>
+            <label>Ospiti<select name="guests"><option value="1">1 persona</option><option value="2" selected>2 persone</option><option value="3">3 persone</option></select></label>
+          </div>
+          <p class="bk-msg" data-msg></p>
+          <button class="btn" type="button" data-next>Vedi le camere libere</button>
+        </fieldset>
+
+        <!-- 2. room -->
+        <fieldset class="step" data-step="1" hidden>
+          <legend class="sr">Scegli la camera</legend>
+          <p class="bk-sum" data-sum></p>
+          <div class="room-pick" data-rooms></div>
+          <p class="bk-msg" data-msg></p>
+          <div class="bk-nav"><button class="link" type="button" data-back>Indietro</button><button class="btn" type="button" data-next>Continua</button></div>
+        </fieldset>
+
+        <!-- 3. guest -->
+        <fieldset class="step" data-step="2" hidden>
+          <legend class="sr">I tuoi dati</legend>
+          <div class="grid2">
+            <label>Nome e cognome<input name="name" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Telefono<input name="tel" type="tel" autocomplete="tel" required></label>
+            <label>Orario di arrivo<select name="eta"><option>14:00 – 16:00</option><option selected>16:00 – 19:00</option><option>19:00 – 22:00</option><option>22:00 – 24:00</option></select></label>
+            <label class="full">Richieste per Maria (facoltativo)<textarea name="note" rows="2" placeholder="Culla, intolleranze per la colazione, parcheggio…"></textarea></label>
+          </div>
+          <p class="bk-msg" data-msg></p>
+          <div class="bk-nav"><button class="link" type="button" data-back>Indietro</button><button class="btn" type="button" data-next>Vai al pagamento</button></div>
+        </fieldset>
+
+        <!-- 4. payment (demo) -->
+        <fieldset class="step" data-step="3" hidden>
+          <legend class="sr">Pagamento</legend>
+          <div class="bill" data-bill></div>
+          <div class="pay-opt">
+            <label><input type="radio" name="plan" value="full" checked> Paga tutto ora</label>
+            <label><input type="radio" name="plan" value="dep"> Caparra del 30%, il resto all’arrivo</label>
+          </div>
+          <p class="demo-note">Pagamento di prova: nessun addebito reale. Usa la carta 4242 4242 4242 4242, una scadenza futura e un CVC qualsiasi.</p>
+          <div class="grid2 card">
+            <label class="full">Numero della carta<input name="cc" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" maxlength="19"></label>
+            <label>Scadenza<input name="exp" inputmode="numeric" autocomplete="off" placeholder="MM/AA" maxlength="5"></label>
+            <label>CVC<input name="cvc" inputmode="numeric" autocomplete="off" placeholder="123" maxlength="4"></label>
+            <label class="full">Intestatario<input name="holder" autocomplete="off"></label>
+          </div>
+          <p class="bk-msg" data-msg></p>
+          <div class="bk-nav"><button class="link" type="button" data-back>Indietro</button><button class="btn" type="submit" data-pay>Paga</button></div>
+        </fieldset>
+
+        <!-- 5. done -->
+        <div class="step done" data-step="4" hidden aria-live="polite">
+          <p class="done-code" data-code></p>
+          <h3>Prenotazione confermata</h3>
+          <div class="bill" data-final></div>
+          <p>Ti abbiamo inviato il riepilogo via email (in questa demo l’email non parte davvero). Maria ti aspetta in via Segesta 46.</p>
+          <div class="bk-nav"><a class="btn" data-wa target="_blank" rel="noopener">Scrivi a Maria su WhatsApp</a><button class="link" type="button" data-again>Nuova prenotazione</button></div>
+        </div>
+      </form>
+
+      <dl class="book-info">
+        <div><dt>Indirizzo</dt><dd><a href="https://maps.google.com/?q=Via+Segesta+46+Castellammare+del+Golfo">Via Segesta 46, 91014 Castellammare del Golfo (TP)</a></dd></div>
+        <div><dt>Telefono</dt><dd><a href="tel:+393391134202">339 113 4202</a></dd></div>
+        <div><dt>Check-in</dt><dd>dalle 14:00 alle 24:00</dd></div>
+        <div><dt>Check-out</dt><dd>dalle 08:00 alle 10:00</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot-mark" aria-label="White"><span>W</span><span>h</span><span>i</span><span>t</span><span>e</span></p>
+  <div class="foot-row">
+    <span>White B&amp;B · Via Segesta 46, Castellammare del Golfo</span>
+    <span>CIN IT081005C2QLC4VSZQ</span>
+    <span>Demo di PuntoDue Studio</span>
+  </div>
+  <p class="credits">Foto: “Tonnara di Scopello – Plage” di Patrice78500, “Riserva dello Zingaro” di Pom’, “Castellammare del Golfo 2013” di Σπάρτακος, “Segesta 06-10-2017 08” (Wikimedia), CC BY-SA, via Wikimedia Commons. Foto iniziale, colazione, Cala Petrolo e tramonto generate per la demo.</p>
+  <div hidden>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+<script src="booking.js"></script>
+</body>
+</html>
