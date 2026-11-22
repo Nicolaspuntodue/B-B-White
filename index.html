@@ -14,13 +14,29 @@
 <canvas id="gl" aria-hidden="true"></canvas>
 
 <header class="nav">
-  <a href="#top" class="nav-mark">White B&amp;B</a>
-  <nav>
+  <a href="#top" class="logo" aria-label="White B&amp;B, torna all’inizio"><span class="logo-w">White</span><span class="logo-bb">B&amp;B</span><span class="logo-bar" aria-hidden="true"></span></a>
+  <nav class="nav-links" aria-label="Sezioni">
     <a href="#camere">Camere</a>
     <a href="#colazione">Colazione</a>
-    <a href="#prenota">Prenota</a>
+    <a href="#dintorni">Dintorni</a>
   </nav>
+  <a href="#prenota" class="nav-book">Prenota</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu"><span></span><span></span><span></span></button>
 </header>
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menu">
+    <a href="#casa" style="--c:#ef7317">La casa</a>
+    <a href="#camere" style="--c:#1f5fc4">Camere</a>
+    <a href="#colazione" style="--c:#d8262c">Colazione</a>
+    <a href="#dintorni" style="--c:#7a4bb0">Dintorni</a>
+    <a href="#prenota" style="--c:#4f8a2f">Prenota</a>
+  </nav>
+  <div class="menu-foot">
+    <a href="tel:+393391134202">339 113 4202</a>
+    <a href="https://wa.me/393391134202" target="_blank" rel="noopener">WhatsApp</a>
+    <span>Via Segesta 46, Castellammare del Golfo</span>
+  </div>
+</div>
 
 <main id="top">
   <section class="hero" id="hero">
@@ -98,7 +114,7 @@
   </section>
 
   <div class="marquee" aria-hidden="true"><div class="mq-track"><span>Castellammare del Golfo</span><span>Cala Petrolo</span><span>Scopello</span><span>Zingaro</span><span>Segesta</span><span>Monte Inici</span><span>Castellammare del Golfo</span><span>Cala Petrolo</span><span>Scopello</span><span>Zingaro</span><span>Segesta</span><span>Monte Inici</span></div></div>
-  <section class="around">
+  <section class="around" id="dintorni">
     <div class="around-head reveal"><h2>Intorno a via Segesta</h2><div class="around-stack">
         <img class="on" src="img/golfo.webp" alt="Il porto e il centro di Castellammare dall’alto" width="1920" height="1440" loading="lazy">
         <img src="img/cala-petrolo.webp" alt="La spiaggia di Cala Petrolo sotto il castello" width="896" height="1120" loading="lazy">

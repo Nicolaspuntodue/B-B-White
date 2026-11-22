@@ -113,8 +113,9 @@ void main(){
 }
 
 gsap.registerPlugin(ScrollTrigger);
+addEventListener('load', () => ScrollTrigger.refresh());
 if (!reduce && window.Lenis) {
-  const lenis = new Lenis({ lerp: .1 });
+  const lenis = new Lenis({ lerp: .1 }); window.__lenis = lenis;
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(t => lenis.raf(t * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -196,12 +197,26 @@ if (!reduce) {
   items.forEach((li, i) => ScrollTrigger.create({ trigger: li, start: 'top 60%', end: 'bottom 60%',
     onToggle: s => { if (!s.isActive) return; items.forEach(x => x.classList.toggle('now', x === li)); pics.forEach((p, k) => p.classList.toggle('on', k === i)); } }));
   items[0].classList.add('now');
-  if (!reduce) gsap.from(items, { x: 60, opacity: 0, duration: .9, ease: 'power3.out', stagger: .1,
-    scrollTrigger: { trigger: list, start: 'top 80%', once: true } });
   // booking card tilts up into place
   if (!reduce) gsap.fromTo('.book-card', { rotateX: 14, y: 120, opacity: .4 }, { rotateX: 0, y: 0, opacity: 1, ease: 'none',
     scrollTrigger: { trigger: '.book', start: 'top bottom', end: 'top 25%', scrub: true } });
   // footer letters rise one by one
   if (!reduce) gsap.fromTo('.foot-mark span', { yPercent: 100, rotate: 8 }, { yPercent: 0, rotate: 0, ease: 'none', stagger: .08,
     scrollTrigger: { trigger: '.foot', start: 'top bottom', end: 'bottom bottom', scrub: true } });
+}
+
+// ---- menu bar: burger panel + hide on scroll down ----
+{
+  const nav = document.querySelector('.nav'), burger = document.querySelector('.burger'), menu = document.getElementById('menu');
+  const setOpen = open => {
+    burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    menu.hidden = !open; document.documentElement.style.overflow = open ? 'hidden' : '';
+    if (window.__lenis) open ? window.__lenis.stop() : window.__lenis.start();
+    if (open && !reduce) gsap.from('.menu nav a', { y: 40, opacity: 0, duration: .6, ease: 'power3.out', stagger: .06 });
+  };
+  burger.addEventListener('click', () => setOpen(menu.hidden));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); }, true);
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setOpen(false); burger.focus(); } });
+  let last = 0;
+  addEventListener('scroll', () => { nav.classList.toggle('small', scrollY > 80); }, { passive: true });
 }
